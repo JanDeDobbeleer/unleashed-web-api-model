@@ -4,7 +4,7 @@ put:
   summary: Migrate Customer
   description: >
     This context is only used for Stievie. When creating a Customer for Stievie, it is only created in Gigya.
-    As have no idea where the logged in Customer was created, we need to apply our data validation rules to it.
+    As we have no idea where the logged in Customer was created, we need to apply our data validation rules to it.
     This endpoint will gather all required data, update Gigya and create a Customer in our BSS solution.
   consumes:
   - application/json
@@ -13,7 +13,7 @@ put:
   parameters:
     - name: Customer object
       in: body
-      description: "The Customer data to be updated"
+      description: The Customer data to be updated
       required: true
       schema:
         $ref: '#/definitions/MigrateCustomer'
