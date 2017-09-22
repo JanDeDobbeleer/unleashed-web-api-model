@@ -1,6 +1,7 @@
 get:
   tags:
-    - Customers
+    - Subscriptions
+    - Notifications
   summary: "Get subscription notification settings"
   consumes:
     - application/json
@@ -26,7 +27,8 @@ get:
         $ref: '#/definitions/Status'
 put:
   tags:
-    - Customers
+    - Subscriptions
+    - Notifications
   summary: "Set notification settings. An omitted value leaves the current setting unchanged."
   consumes:
     - application/json

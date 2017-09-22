@@ -42,6 +42,12 @@ Since we have gone live with Stievie and part of the Mobile Viking's pages in pr
 
 Therefor use the word `DEPRECATED` in the description if a call becomes deprecated and make sure there is a clean up task for UWA, that removes the deprecated code once all web components have done the needed changes.
 
+### Mark items not yet implemented
+
+Functionality that is not yet available needs to be marked as `NOT YET IMPLEMENTED` in the description.
+We've got a wishlist of items we'd like to have, but therefore they are not necessarily going to be available.
+We're working on resolving these asap.
+
 [build-status-badge]: https://travis-ci.org/vikingco/unleashed-web-api-model.svg?branch=master
 [build-status]: https://travis-ci.org/vikingco/unleashed-web-api-model
 [uwa]: https://api.unleashed.be

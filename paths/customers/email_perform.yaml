@@ -1,8 +1,10 @@
 post:
   tags:
     - Email
-  summary: "Perform update email address"
-  x-operationName: Perform
+  summary: Update email address
+  description: >
+    After requesting an email update, this endpoint can be used to validate the code which was send to it and execute the replacement.
+    For Stievie, this logic is handled by Gigya itself.
   consumes:
     - application/json
   produces:

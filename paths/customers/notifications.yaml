@@ -1,7 +1,9 @@
 get:
   tags:
     - Customers
-  summary: "Get general notification settings"
+  summary: Notification settings
+  description: >
+    Returns the notification settings on a Customer level.
   consumes:
     - application/json
   produces:
@@ -22,7 +24,10 @@ get:
 put:
   tags:
     - Customers
-  summary: "Set notification settings. An omitted value leaves the current setting unchanged."
+    - Notifications
+  summary: Update notification settings
+  description: >
+    Update the notification settings for a Customer.
   consumes:
     - application/json
   produces:

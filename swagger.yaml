@@ -1,4 +1,5 @@
 swagger: "2.0"
+x-navigateMethodsByName: true
 info:
   title: "Unleashed Web Api"
   description: "This is an API for our frontends and users to interact with Unleashed"

@@ -1,5 +1,5 @@
 type: object
-title: Adjust customer information and complete the transition to SBSS
+title: Adjust customer information and complete the transition to BSS
 required:
   - first_name
   - last_name

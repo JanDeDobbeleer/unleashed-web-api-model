@@ -1,8 +1,10 @@
 post:
   tags:
     - Email
-  summary: "Update email address"
-  x-operationName: Update
+  summary: Request email address update
+  description: >
+    When the Customer wants to update their email address, there first needs to be a request to receive a token.
+    This token is then used to validate the email address and execute the requested change.
   consumes:
     - application/json
   produces:
@@ -19,7 +21,7 @@ post:
         $ref: '#/definitions/EmailUpdate'
   responses:
     204:
-      description: Email changed
+      description: Email change requested accepted
     400:
       description: Bad request, see body for details.
       schema:

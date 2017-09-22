@@ -13,7 +13,7 @@
 /email/update/perform:
   $ref: ./customers/email_perform.yaml
 /notification-settings:
-  $ref: ./notifications/general_notification_settings.yaml
+  $ref: ./customers/notifications.yaml
 /password/update:
   $ref: ./password/update.yaml
 /invoices:

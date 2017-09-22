@@ -1,54 +1,32 @@
 get:
   tags:
     - Customers
-  summary: "Get customer information"
+  summary: "Customer information"
   produces:
     - application/json
   parameters:
     - $ref: "#/parameters/authorization"
     - name: social
       in: query
-      description: "Shows the social info if true"
+      description: >
+        NOT YET IMPLEMENTED
+        Shows the social info if true.
       required: false
       type: boolean
       default: false
   responses:
     200:
-      description: Returns the customer information
+      description: Customer information
       schema:
         $ref: '#/definitions/Customer'
     403:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
-  x-stoplight:
-      afterScript: |
-        function (ctx, request, response) {
-          var body = response.body.get();
-          var address = request.url.query.get("address");
-          var social = request.url.query.get("social");
-          if (address) {
-            body.address = {
-              street: "Kempische Steenweg",
-              number: "309",
-              box: "1",
-              postcode: "3500",
-              city: "Hasselt",
-              country: "BE"
-            }
-          }
-          if (social) {
-            body.social = {
-              twitter: "Unleashed",
-              facebook: "Unleashed"
-            }
-          }
-          response.body.set(body);
-        }
 put:
   tags:
     - Customers
-  summary: "Update customer information"
+  summary: Update Customer
   consumes:
     - application/json
   produces:
@@ -58,7 +36,7 @@ put:
       #TO-DO: customer body is optional
   responses:
     200:
-      description: Returns the customer information
+      description: Customer information
       schema:
         $ref: '#/definitions/Customer'
     403:

@@ -1,7 +1,10 @@
 post:
   tags:
     - Customers
-  summary: "Request verification"
+  summary: Request verification
+  description: >
+    Some brands require some form of verification before being able to create or update a customer.
+    This endpoint will allow you to trigger that and complete the request containing a `verification_code`
   consumes:
     - application/json
   produces:
@@ -9,7 +12,7 @@ post:
   parameters:
     - name: verification data
       in: body
-      description: "Contains data to be verified"
+      description: "Data to be verified"
       required: true
       schema:
         $ref: '#/definitions/VerifyCustomer'

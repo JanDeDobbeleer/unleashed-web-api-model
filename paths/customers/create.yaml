@@ -1,8 +1,10 @@
 post:
   tags:
     - Customers
-  summary: "Create a new customer"
-  x-operationName: Create
+  summary: Create a Customer
+  description: >
+    Create a Customer for one of our brands. For Mobile Vikings and Jim Mobile, this will go straight to our BSS solution.
+    For Stievie, the Customer will be created in [Gigya](http://www.gigya.com/).
   consumes:
   - application/json
   produces:
@@ -10,13 +12,13 @@ post:
   parameters:
     - name: Customer object
       in: body
-      description: "Contains the customer data"
+      description: Customer data
       required: true
       schema:
         $ref: '#/definitions/CreateCustomer'
   responses:
     201:
-      description: Successfully created customer
+      description: Successfully created Customer
       schema:
         $ref: '#/definitions/Customer'
     400:
@@ -27,5 +29,3 @@ post:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'
-  x-stoplight:
-    afterScript: "function (ctx, requestresponse) { var body = request.body.get()if (body == 1) { var response request.hijack(400, 'application/json''PLease enter info'}); } }"
