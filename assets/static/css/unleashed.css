@@ -8,6 +8,10 @@
     height: 68px;
 }
 
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: -3px;
+}
+
 pre,
 code,
 pre code,
@@ -36,4 +40,14 @@ pre code,
     height: 64px;
     width: 325px;
     padding-bottom: 7px;
+}
+
+.unleashed {
+    display: inherit;
+}
+
+@media (max-width:640px){
+    .unleashed {
+        display:none;
+    }
 }
