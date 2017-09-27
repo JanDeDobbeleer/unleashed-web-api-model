@@ -3,7 +3,6 @@ post:
   - Authorization
   summary: "Request an access token"
   description: "To be able to talk to the API, you need to request access token."
-  x-operationName: Token
   consumes:
   - application/x-www-form-urlencoded
   produces:

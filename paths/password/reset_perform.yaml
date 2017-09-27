@@ -4,7 +4,6 @@ post:
   summary: "Reset password to new one"
   description: |
     Perform a password reset using a code.  The code can be requested using the **reset/request** operation.
-  x-operationName: Reset
   consumes:
     - application/json
   parameters:

@@ -6,7 +6,6 @@ post:
     Request to reset a password.  Make a request here with the credentials of a user to generate a reset code which
     will be delivered out of band.  After that, have the user enter the code somewhere, and make a second request to
     reset/perform.
-  x-operationName: Request
   consumes:
     - application/json
   parameters:

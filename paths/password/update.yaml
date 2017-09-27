@@ -2,7 +2,6 @@ post:
   tags:
     - Password
   summary: "Update password"
-  x-operationName: Update
   consumes:
     - application/json
   produces:
