@@ -15,6 +15,14 @@ pre code,
     color: #81251b;
 }
 
+.affix {
+    position: relative;
+}
+
+.side-nav.affix, .side-nav.affix-bottom {
+    width: 100%;
+}
+
 .footer {
     background-color: #333;
     height: 80px;
