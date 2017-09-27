@@ -1,10 +1,11 @@
 swagger: "2.0"
 x-navigateMethodsByName: true
 info:
-  title: "Unleashed Web Api"
-  description: "This is an API for our frontends and users to interact with Unleashed"
-  version: "1.0"
-host: "api.unleashed.be"
+  title: Unleashed Web Api
+  description: This is an API for our frontends and users to interact with Unleashed
+  version: "0.5"
+host: api.unleashed.be
+basePath: /stievie
 tags:
   - name: Authorization
     description: Authenticate
