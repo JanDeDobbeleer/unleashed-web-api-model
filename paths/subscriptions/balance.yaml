@@ -1,7 +1,7 @@
 get:
   tags:
     - Subscriptions
-  summary: "Get subscription's balance (credit, sms's, call minutes, ...)"
+  summary: Balance
   produces:
     - application/json
   parameters:

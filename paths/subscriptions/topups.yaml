@@ -2,7 +2,7 @@ get:
   tags:
     - Subscriptions
     - Finance
-  summary: "Get subscription's topup history"
+  summary: Topup history
   produces:
     - application/json
   parameters:

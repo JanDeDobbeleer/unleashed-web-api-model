@@ -20,8 +20,6 @@
   $ref: ./finance/invoices.yaml
 /payments:
   $ref: ./finance/payments.yaml
-/subscriptions:
-  $ref: ./subscriptions/subscriptions.yaml
 /mandates:
   $ref: ./finance/mandate_list.yaml
 /mandates/{id}:
@@ -40,26 +38,29 @@
   $ref: ./orders/create_and_list.yaml
 /orders/{id}:
   $ref: ./orders/details.yaml
+# Subscriptions
 /subscriptions/{id}:
   $ref: ./subscriptions/subscription.yaml
-/subscriptions/{id}/topups:
-  $ref: ./subscriptions/topups.yaml
+/subscriptions:
+  $ref: ./subscriptions/subscriptions.yaml
 /subscriptions/{id}/balance:
   $ref: ./subscriptions/balance.yaml
+/subscriptions/{id}/records:
+  $ref: ./subscriptions/usage_records.yaml
+/subscriptions/{id}/topups:
+  $ref: ./subscriptions/topups.yaml
 /subscriptions/{id}/voicemail-settings:
   $ref: ./subscriptions/voicemail_settings.yaml
 /subscriptions/{id}/notification-settings:
   $ref: ./notifications/subscription_notification_settings.yaml
 /subscriptions/{id}/sim/swap:
   $ref: ./telco/sim_swap.yaml
-/subscriptions/{id}/records:
-  $ref: ./subscriptions/usage_records.yaml
-/subscriptions/{id}/invoices:
-  $ref: ./finance/subscription_invoices.yaml
 /subscriptions/{id}/payment-settings:
   $ref: ./subscriptions/payment_settings.yaml
 /subscriptions/{id}/invoicing-settings:
   $ref: ./subscriptions/invoicing_settings.yaml
+/subscriptions/{id}/invoices:
+  $ref: ./finance/subscription_invoices.yaml
 /apps/versions:
   $ref: ./apps/versions.yaml
 /invoices/{id}/pdf:

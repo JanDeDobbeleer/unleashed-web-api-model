@@ -1,7 +1,7 @@
 get:
   tags:
     - Subscriptions
-  summary: "Gets voicemail settings"
+  summary: Get voicemail settings
   produces:
     - application/json
   parameters:
@@ -23,7 +23,7 @@ get:
 put:
   tags:
     - Subscriptions
-  summary: "Sets voicemail settings"
+  summary: Update voicemail settings
   consumes:
     - application/json
   produces:

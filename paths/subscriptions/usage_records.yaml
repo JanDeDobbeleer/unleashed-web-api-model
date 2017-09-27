@@ -1,7 +1,7 @@
 get:
   tags:
     - Subscriptions
-  summary: "Get subscription's call, sms's, ... history"
+  summary: "Usage history"
   produces:
     - application/json
   parameters:

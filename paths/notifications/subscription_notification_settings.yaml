@@ -2,7 +2,7 @@ get:
   tags:
     - Subscriptions
     - Notifications
-  summary: "Get subscription notification settings"
+  summary: Notification settings
   consumes:
     - application/json
   produces:
@@ -29,7 +29,9 @@ put:
   tags:
     - Subscriptions
     - Notifications
-  summary: "Set notification settings. An omitted value leaves the current setting unchanged."
+  summary: Update notification settings
+  description: >
+    An omitted value leaves the current setting unchanged.
   consumes:
     - application/json
   produces:

@@ -1,7 +1,9 @@
 get:
   tags:
     - Subscriptions
-  summary: "Get one specific subscription, if a SIM is linked, also these details are returned"
+  summary: Get subscription
+  description: >
+    In case SIM information is linked to this subscription, a SIM object is returned.
   produces:
     - application/json
   parameters:
@@ -9,11 +11,11 @@ get:
     - name: id
       in: path
       type: string
-      description: "The subscription to get the information about"
+      description: Subscription to get the information about
       required: true
   responses:
     200:
-      description: "Returns details of the requested subscription"
+      description: Returns details of the requested subscription
       schema:
         $ref: '#/definitions/Subscription'
     403:
@@ -23,7 +25,7 @@ get:
 delete:
   tags:
     - Subscriptions
-  summary: "Cancels a specific subscription"
+  summary: Cancel subscription
   produces:
     - application/json
   parameters:
@@ -31,11 +33,11 @@ delete:
     - name: id
       in: path
       type: string
-      description: "The subscription to cancel."
+      description: Subscription to cancel.
       required: true
   responses:
     204:
-      description: "Doesn't return anything except a 204 to indicate no content"
+      description: Doesn't return anything except a 204 to indicate no content.
       schema:
         $ref: '#/definitions/Status'
     403:

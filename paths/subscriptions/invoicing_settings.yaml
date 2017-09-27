@@ -2,7 +2,7 @@ get:
   tags:
     - Subscriptions
     - Finance
-  summary: "Get subscription's invoicing settings."
+  summary: Get invoicing settings
   produces:
     - application/json
   parameters:
@@ -25,7 +25,7 @@ put:
   tags:
     - Subscriptions
     - Finance
-  summary: "Update a subscription's invoicing settings."
+  summary: Update invoicing settings
   consumes:
     - application/json
   parameters:

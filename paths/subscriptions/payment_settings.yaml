@@ -2,7 +2,7 @@ get:
   tags:
     - Subscriptions
     - Finance
-  summary: "Get subscription's payment settings."
+  summary: Payment settings
   produces:
     - application/json
   parameters:
@@ -25,7 +25,7 @@ put:
   tags:
     - Subscriptions
     - Finance
-  summary: "Update a subscription's payment settings."
+  summary: Update payment settings
   description: "Set up automatic payment.  To disable automatic payment, pass an empty mandate_id."
   consumes:
     - application/json

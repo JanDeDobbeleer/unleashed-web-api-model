@@ -1,14 +1,14 @@
 get:
   tags:
     - Subscriptions
-  summary: "Get customer's subscriptions, if a SIM is linked, also these details are returned"
+  summary: List subscriptions
   produces:
     - application/json
   parameters:
     - $ref: "#/parameters/authorization"
   responses:
     200:
-      description: "Returns the customer's subscriptions"
+      description: Returns the customer's subscriptions
       schema:
         type: array
         items:
@@ -26,14 +26,14 @@ get:
 post:
   tags:
     - Subscriptions
-  summary: "Create a subscription"
+  summary: Create subscription
   produces:
     - application/json
   parameters:
     - $ref: "#/parameters/authorization"
     - name: create subscription object
       in: body
-      description: "Contains the subscription data"
+      description: Contains the subscription data
       required: true
       schema:
         $ref: '#/definitions/CreateSubscription'
