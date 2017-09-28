@@ -1,7 +1,7 @@
 get:
   tags:
     - Orders
-  summary: "Get details of an existing order"
+  summary: Get order
   produces:
   - application/json
   parameters:

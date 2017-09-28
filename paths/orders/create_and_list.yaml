@@ -1,7 +1,7 @@
 post:
   tags:
     - Orders
-  summary: "Order one or more products"
+  summary: Create order
   consumes:
   - application/json
   produces:
@@ -25,7 +25,7 @@ post:
 get:
   tags:
     - Orders
-  summary: "retrieve listing of orders from user doing request"
+  summary: List orders
   produces:
   - application/json
   parameters:
