@@ -1,15 +1,15 @@
 get:
   tags:
     - Telco
-  summary: "Get the status of a sim. Use case: it is good (more user friendly) to check the state before finalizing the online onboarding of a sim bought in a shop"
+  summary: Get SIM
   produces:
     - application/json
   parameters:
     - name: iccid
       in: query
       description: |
-        Iccid of the sim to retrieve info for. For unauthenticated users, this needs to be the full length iccid.
-        For authenticated users, the last four digits will suffice and UWA will return the full length iccid.
+        ICC-ID of the sim to retrieve info for. For unauthenticated users, this needs to be the full length ICC-ID.
+        For authenticated users, the last four digits will suffice and UWA will return the full length ICC-ID.
       required: true
       type: string
   responses:

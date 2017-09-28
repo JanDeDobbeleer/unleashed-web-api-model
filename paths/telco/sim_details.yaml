@@ -1,13 +1,13 @@
 get:
   tags:
     - Telco
-  summary: "Get the status of a sim."
+  summary: Get SIM
   produces:
     - application/json
   parameters:
     - name: msisdn
       in: path
-      description: Msisdn of the sim to retrieve info about.
+      description: MSISDN of the sim to retrieve info about.
       required: true
       type: string
   responses:
@@ -22,7 +22,7 @@ get:
 put:
   tags:
     - Telco
-  summary: "block/unblock a sim and/or update alias"
+  summary: Update SIM
   produces:
     - application/json
   consumes:
@@ -31,7 +31,7 @@ put:
     - $ref: "#/parameters/authorization"
     - name: msisdn
       in: path
-      description: Msisdn of the sim to update.
+      description: MSISDN of the sim to update.
       required: true
       type: string
     - name: sim_update

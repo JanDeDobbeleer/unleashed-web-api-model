@@ -1,7 +1,7 @@
 post:
   tags:
     - Telco
-  summary: "Activate a sim"
+  summary: Activate SIM
   consumes:
     - application/json
   produces:
@@ -10,12 +10,12 @@ post:
     - $ref: "#/parameters/authorization"
     - name: msisdn
       in: path
-      description: Msisdn of the sim to activate.
+      description: MSISDN of the sim to activate.
       required: true
       type: string
     - name: Activation request
       in: body
-      description: "activate a sim"
+      description: Activate SIM
       required: true
       schema:
         $ref: '#/definitions/SimActivate'

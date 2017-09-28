@@ -1,7 +1,7 @@
 get:
   tags:
     - Telco
-  summary: "Get current sim swap status"
+  summary: SIM swap status
   consumes:
     - application/json
   produces:
@@ -27,7 +27,7 @@ get:
 post:
   tags:
     - Telco
-  summary: "Request a sim swap"
+  summary: Request SIM swap
   consumes:
     - application/json
   produces:
