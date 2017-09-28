@@ -1,7 +1,7 @@
 get:
   tags:
     - Finance
-  summary: "Get subscription's invoices"
+  summary: List invoices
   produces:
     - application/json
   parameters:

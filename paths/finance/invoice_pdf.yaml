@@ -1,7 +1,7 @@
 get:
   tags:
     - Finance
-  summary: "Get an invoice as pdf"
+  summary: Invoice PDF
   produces:
     - application/pdf
     - application/json #only used in case of errors

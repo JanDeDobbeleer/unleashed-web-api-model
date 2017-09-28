@@ -1,7 +1,7 @@
 get:
   tags:
     - Finance
-  summary: "Get customer's mandates"
+  summary: List mandates
   produces:
     - application/json
   parameters:

@@ -1,7 +1,7 @@
 post:
   tags:
     - Finance
-  summary: "Pay an invoice or order"
+  summary: Pay an invoice or order
   consumes:
     - application/json
   produces:

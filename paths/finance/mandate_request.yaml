@@ -1,7 +1,7 @@
 post:
   tags:
     - Finance
-  summary: "Request a new mandate"
+  summary: Request mandate creation
   consumes:
     - application/json
   produces:

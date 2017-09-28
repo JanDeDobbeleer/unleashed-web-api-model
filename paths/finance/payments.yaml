@@ -1,7 +1,7 @@
 get:
   tags:
     - Finance
-  summary: "Get customer's payments"
+  summary: Get payments
   produces:
     - application/json
   parameters:
