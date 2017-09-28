@@ -1,4 +1,5 @@
 type: object
+title: Activation
 properties:
   iccid:
     type: string

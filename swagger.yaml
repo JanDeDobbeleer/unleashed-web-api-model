@@ -19,6 +19,8 @@ tags:
     description: Products
   - name: Subscriptions
     description: Subscriptions
+  - name: Telco
+    description: Telco
   - name: Finance
     description: Finance
   - name: Orders
