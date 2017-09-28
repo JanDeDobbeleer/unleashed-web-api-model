@@ -1,7 +1,9 @@
 post:
   tags:
     - Point of sale
-  summary: "This endpoint will be used by our friend in a point of sale to validate and create a customer in SBSS. The validation is done via checkdoc (integration on CA end). If the call succeeds, a customer is created without any data apart from its identity entity."
+  summary: Create customer
+  description: >
+    This endpoint will be used by our friend in a point of sale to validate and create a customer in SBSS. If the call succeeds, a customer is created without any data apart from its identity entity.
   consumes:
   - application/json
   produces:
@@ -11,13 +13,13 @@ post:
     - $ref: "#/parameters/x-pos-agent"
     - name: POS Customer object
       in: body
-      description: "Contains the POS Customer data"
+      description: Customer data
       required: true
       schema:
         $ref: '#/definitions/CreatePosCustomer'
   responses:
     201:
-      description: Successfully created customer
+      description: Created customer
       schema:
         $ref: '#/definitions/Customer'
     403:
