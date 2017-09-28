@@ -68,7 +68,7 @@
 /pay:
   $ref: ./finance/pay.yaml
 /sims:
-  $ref: ./telco/sim.yaml
+  $ref: ./telco/sim_via_icc_id.yaml
 /sims/{msisdn}:
   $ref: ./telco/sim_details.yaml
 /sims/{msisdn}/activate:

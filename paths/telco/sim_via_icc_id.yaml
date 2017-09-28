@@ -1,7 +1,7 @@
 get:
   tags:
     - Telco
-  summary: Get SIM
+  summary: Get SIM via ICC-ID
   produces:
     - application/json
   parameters:
