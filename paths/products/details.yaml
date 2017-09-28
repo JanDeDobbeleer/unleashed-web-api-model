@@ -1,7 +1,7 @@
 get:
   tags:
     - Products
-  summary: "Get details of an existing product"
+  summary: Get product
   produces:
   - application/json
   parameters:
