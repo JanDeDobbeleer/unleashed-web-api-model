@@ -18,6 +18,8 @@ Gender:
   $ref: ./customers/gender.yaml
 CreateCustomer:
   $ref: ./customers/create_customer.yaml
+UpdateCustomer:
+  $ref: ./customers/update_customer.yaml
 Customer:
   $ref: ./customers/customer.yaml
 MigrateCustomer:
@@ -134,3 +136,4 @@ LoyaltyTransferRequest:
   $ref: ./loyalty/loyalty_transfer_request.yaml
 PaginationBodyDetails:
   $ref: ./general/pagination_body_details.yaml
+

@@ -25,7 +25,12 @@ put:
     - application/json
   parameters:
     - $ref: "#/parameters/authorization"
-      #TO-DO: customer body is optional
+    - name: Customer object
+      in: body
+      description: Customer data
+      required: true
+      schema:
+        $ref: '#/definitions/UpdateCustomer'
   responses:
     200:
       description: Customer information
@@ -35,3 +40,4 @@ put:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
+
