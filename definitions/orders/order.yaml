@@ -11,12 +11,19 @@ properties:
     type: string
   amount:
     type: number
+    description: the total cost (without possible reductions applied)
+    format: float
+  amount_due:
+    type: number
+    description: the amount the customer still needs to pay
     format: float
   allowed_payment_methods:
     type: array
-    description: Allowed methods to use
+    description: |
+      Allowed methods to use.
+      This field will only be correctly filled if the order is in the 'waiting_for_payment' state.
     items:
-      $ref: '#/definitions/PaymentMethod'
+      $ref: '#/definitions/PaymentMethodAllowed'
   status:
     type: string
     enum:
@@ -27,6 +34,7 @@ properties:
       - waiting_for_payment
       - waiting_for_customer_verification
       - waiting_for_switch_accept
+      - waiting_for_internal_processing
       - created
       - processing
       - review_needed
@@ -52,11 +60,11 @@ properties:
       - unknown
   date_created:
     type: string
-    format: date
+    format: date-time
     description: datetime that the customer created this order
   date_updated:
     type: string
-    format: date
+    format: date-time
     description: latest datetime that the customer updated this order
   product_ids:
     type: array
@@ -81,3 +89,5 @@ properties:
   subscription_id:
     type: string
     description: The subscription id this order belongs to
+  donor:
+    $ref: '#/definitions/OrderDonor'

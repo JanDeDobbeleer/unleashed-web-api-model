@@ -18,9 +18,18 @@ properties:
     description: The ID of the subscription that this order is for
   password:
     type: string
-    description: A password is required for performing migrations from prepaid to postpaid.
+    description: >
+     A password is required for:
+
+        * performing migrations from prepaid to postpaid,
+        * create order with enough reductions
+        * use mandate
+
   reductions:
     type: array
     description: Things you want to use as reductions and/or extra benefits for your order.
     items:
       $ref: '#/definitions/OrderReduction'
+  mandate_id:
+    type: string
+    description: Id of mandate to use for payment

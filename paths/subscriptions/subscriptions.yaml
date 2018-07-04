@@ -6,6 +6,16 @@ get:
     - application/json
   parameters:
     - $ref: "#/parameters/authorization"
+    - name: state
+      in: query
+      type: string
+      description: |
+        Only show descriptions with a state in the given, comma-separated list
+
+        If the value of this parameter is `all`, show all subscriptions,
+        regardless of state. If the `state` parameter is not given, its value
+        defaults to `?state=enabled,disabled,locked`, to maintain backwards
+        compatibilty.
   responses:
     200:
       description: Returns the customer's subscriptions

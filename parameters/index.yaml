@@ -50,7 +50,7 @@ recaptcha:
 from_date:
       name: from_date
       in: query
-      description: from which date to fetch the history (default=Today)
+      description: from which date to fetch the history (default=Today, only applicable for mv and will go away after migration)
       required: false
       type: string
       format: date
@@ -58,7 +58,7 @@ from_date:
 until_date:
       name: until_date
       in: query
-      description: to which date to fetch the history (default=Tomorrow)
+      description: to which date to fetch the history (default=31 days ago, only applicable for mv and will go away after migration)
       required: false
       type: string
       format: date

@@ -3,3 +3,7 @@ title: Operator
 properties:
   name:
     type: string
+    description: the name of the operator itself
+  donor:
+    type: string
+    description: the name of the MNO that the operator belongs to

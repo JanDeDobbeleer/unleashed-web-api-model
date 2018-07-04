@@ -35,7 +35,7 @@ To be able to talk to UWA, you need to specify which brand you want to communica
 We have some specific UWA types, below you find some details of them.
 
 ### Msisdn
-If a field is of type `msisdn` we expect a Belgian formatted mobile number, so it has pattern `^(?:0|0032|\+32)4[0-9]{8}$`.
+If a field is of type `msisdn` we accept `^(?:0|0032|\+32|32)4[0-9]{8}$` and we expose them [E.164][e164] formatted
 
 ### ProductId
 If a field is of type `product_id` we expect it is a compound key of `offeringId-offeringVersion-offeringVariant`.
@@ -49,3 +49,4 @@ In case you encounter an issue with our API, or when you've got a feature reques
 [jim]: https://jimmobile.be
 [stievie]: https://stievie.be
 [repo]: https://github.com/vikingco/unleashed-web-api-model
+[e164]: https://en.wikipedia.org/wiki/E.164

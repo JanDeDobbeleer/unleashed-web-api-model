@@ -29,8 +29,7 @@ properties:
       bundles:
         description: >
           The amount of units in the different bundles of the product. These are expressed as integers, with the unit
-          depending on the service of the bundle. Probable keys are voice, sms, data, mms, voice_super_on_net,
-          sms_super_on_net.
+          depending on the service of the bundle. Probable keys are voice, sms, data and mms.
         type: object
       bundle_prices:
         description: >

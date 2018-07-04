@@ -6,9 +6,6 @@ enum:
  - Mastercard
  - Belfius Payment Button
  - KBC/CBC Payment Button
- - Manual
  - Bitcoin
- - Mandate
- - Vouchers
  - Paypal
  - Unknown

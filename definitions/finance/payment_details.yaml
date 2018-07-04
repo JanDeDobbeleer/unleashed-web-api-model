@@ -6,7 +6,7 @@ required:
  - amount
 properties:
   payment_method:
-    $ref: '#/definitions/PaymentMethod'
+    $ref: '#/definitions/PaymentMethodUsed'
   amount:
     type: number
     format: float

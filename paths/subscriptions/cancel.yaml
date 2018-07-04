@@ -1,0 +1,32 @@
+post:
+  tags:
+    - Subscriptions
+  consumes:
+    - application/json
+  summary: Cancel subscription
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      type: string
+      description: Subscription to cancel.
+      required: true
+    - name: password
+      in: body
+      description: Verification required to cancel subscription.
+      required: true
+      schema:
+        $ref: '#/definitions/PasswordCheck'
+
+  responses:
+    204:
+      description: Doesn't return anything except a 204 to indicate no content.
+      schema:
+        $ref: '#/definitions/Status'
+    401:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+

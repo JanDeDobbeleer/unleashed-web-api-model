@@ -15,7 +15,10 @@ properties:
       - customer_identifier_not_unique
       - duplicate_request
       - email_already_in_use
+      - email_not_verified
+      - expired_token
       - iccid_already_in_use
+      - insufficient_loyalty_points
       - invalid_customer
       - invalid_fields
       - invalid_grant
@@ -24,12 +27,17 @@ properties:
       - invalid_recaptcha_response
       - invalid_referred_mgm_customer
       - invalid_token
+      - invalid_query_parameter
       - invalid_user
       - login_by_email_impossible
       - mandate_cannot_be_set
+      - mandate_cannot_be_set_invalid_values
       - not_enough_balance
       - not_payable
+      - other_pending_language_change
       - package_already_active
+      - password_mandatory
+      - subscription_deactivated
       - swap_already_running
       - unable_to_process
   message:
@@ -51,6 +59,8 @@ properties:
               code:
                 type: string
                 enum:
+                - customer_not_found
+                - customer_should_not_be_self
                 - email_address_already_in_use
                 - expired_phone_verification_code
                 - invalid_email_verification_code

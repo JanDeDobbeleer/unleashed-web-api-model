@@ -40,6 +40,8 @@
   $ref: ./orders/create_and_list.yaml
 /orders/{id}:
   $ref: ./orders/details.yaml
+/orders/{id}/donor:
+  $ref: ./orders/donor_details.yaml
 # Subscriptions
 /subscriptions/{id}:
   $ref: ./subscriptions/subscription.yaml
@@ -49,6 +51,8 @@
   $ref: ./subscriptions/auto_topup_settings.yaml
 /subscriptions/{id}/balance:
   $ref: ./subscriptions/balance.yaml
+/subscriptions/{id}/cancel:
+  $ref: ./subscriptions/cancel.yaml
 /subscriptions/{id}/usage:
   $ref: ./subscriptions/usage.yaml
 /subscriptions/{id}/topups:

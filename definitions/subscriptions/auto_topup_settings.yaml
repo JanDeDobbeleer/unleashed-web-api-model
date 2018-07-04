@@ -3,7 +3,6 @@ title: Auto topup settings
 description: Auto-topup settings
 required:
   - triggers
-  - mandate_id
   - product_id
 properties:
   triggers:

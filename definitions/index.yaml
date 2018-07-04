@@ -56,6 +56,8 @@ Order:
   $ref: ./orders/order.yaml
 OrderReduction:
   $ref: ./orders/reduction.yaml
+OrderDonor:
+  $ref: ./orders/donor.yaml
 ContactInformation:
   $ref: ./general/contact_information.yaml
 ShippingInfo:
@@ -96,16 +98,16 @@ RequestMandate:
   $ref: ./mandates/request_mandate.yaml
 RequestMandateResponse:
   $ref: ./mandates/request_mandate_response.yaml
-PaymentMethod:
-  $ref: ./finance/payment_method.yaml
+PaymentMethodUsed:
+  $ref: ./finance/payment_method_used.yaml
+PaymentMethodAllowed:
+  $ref: ./finance/payment_method_allowed.yaml
 PaymentDetails:
   $ref: ./finance/payment_details.yaml
 PaymentInformation:
   $ref: ./finance/payment_information.yaml
 Version:
   $ref: ./apps/version.yaml
-Topup:
-  $ref: ./finance/topup.yaml
 AutoTopupSettings:
   $ref: ./subscriptions/auto_topup_settings.yaml
 AutoTopupTrigger:

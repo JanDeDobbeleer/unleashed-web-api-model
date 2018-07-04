@@ -6,10 +6,7 @@ get:
   produces:
     - application/json
   description: |
-    Note that the response is deprecated and will change to paginated response
-    like e.g. [Loyalty Points](/unleashed-web-api/reference/loyalty-points/list-of-loyalty-transactions).
-    Also it will return orders and no longer specific Topup object.
-    You can already use this new response by using `/topups-new/`.
+    Return the orders that contains a product that is a top-up.
   parameters:
     - name: status
       in: query
@@ -28,10 +25,19 @@ get:
   responses:
     200:
       description: Returns the subscription's topups
+      headers:
+        link:
+          type: string
+          description: Containing details about links to first, last, previous and next pages if applicable.
       schema:
-        type: array
-        items:
-          $ref: '#/definitions/Topup'
+        title: Paginated Orders
+        allOf:
+          - $ref: '#/definitions/PaginationBodyDetails'
+          - properties:
+              results:
+                type: array
+                items:
+                    $ref: '#/definitions/Order'
     401:
       description: unauthorized
       schema:

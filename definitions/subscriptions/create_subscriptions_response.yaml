@@ -9,6 +9,8 @@ properties:
     description: If applicable, returns the order_id
   allowed_payment_methods:
     type: array
-    description: Allowed methods to pay for subscription
+    description: |
+      Allowed methods to use.
+      This field will only be correctly filled if the order is in the 'waiting_for_payment' state.
     items:
-      $ref: '#/definitions/PaymentMethod'
+      $ref: '#/definitions/PaymentMethodAllowed'

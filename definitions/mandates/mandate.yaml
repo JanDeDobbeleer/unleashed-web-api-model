@@ -5,6 +5,7 @@ required:
   - method
   - payment_provider
   - label
+  - is_owner
 properties:
   id:
     type: string
@@ -33,5 +34,11 @@ properties:
      Information on the payment method. This is method-specific. e.g. for visa, it could be the last four card digits
   expiration_date:
     type: string
-    format: date
+    format: date-time
     description: date that this mandate will expire if applicable (e.g. for creditcard mandate)
+  customer_id:
+    type: string
+    description: the id of the customer that owns this mandate.
+  is_owner:
+    type: boolean
+    description: indicates if the customer is the owner of this mandate. Only applicable when you have the sim authorization feature active on your BSS otherwise it always will be true.

@@ -5,6 +5,7 @@ get:
   produces:
   - application/json
   parameters:
+    - $ref: "#/parameters/authorization"
     - name: id
       in: path
       description: id of order to fetch the details for
@@ -29,6 +30,7 @@ delete:
   produces:
   - application/json
   parameters:
+    - $ref: "#/parameters/authorization"
     - name: id
       in: path
       description: id of order to cancel
@@ -37,3 +39,9 @@ delete:
   responses:
     204:
       description: Successfull cancelled order
+    401:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+    404:
+      description: No such order

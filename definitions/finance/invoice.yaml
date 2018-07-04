@@ -14,7 +14,7 @@ properties:
     type: string
   date:
     type: string
-    format: date
+    format: date-time
   amount:
     type: number
     format: float
@@ -30,6 +30,7 @@ properties:
     - partially_paid
     - pending_payment
     - review
+    - unknown
   reference_number:
     type: string
   amount_due:

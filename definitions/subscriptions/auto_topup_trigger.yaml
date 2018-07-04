@@ -9,7 +9,10 @@ properties:
     type: string
     description: |
       What kind unit might the trigger an auto-topup. Currently these are the three possible triggers: data_low, bundle_expiry and credit_low
-      (we are not using an enum as this list can be dynamic, that's also why a localized description is used)
+    enum:
+      - "data_low"
+      - "bundle_expiry"
+      - "credit_low"
   threshold:
     type: number
     description: If the trigger value goes below this threshold an auto-topup is triggered.

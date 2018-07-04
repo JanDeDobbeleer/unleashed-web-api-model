@@ -11,8 +11,9 @@ properties:
   verification_state:
     type: string
     enum:
-      - forever
-      - temporarily
+      - verified
+      - temporarily_verified
+      - unverified
   verified_until:
     description: It represents how long the current state will still be valid if temporary.
     type: string

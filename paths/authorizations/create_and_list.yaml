@@ -12,7 +12,10 @@ get:
       type: string
   responses:
     200:
-      description: All the authorisations a customer has or has given.
+      description: |
+        All the authorisations a customer has or has given.
+        Note that authorized_customer will only contain e-mail,
+        since that is the only supported identifier at this moment to create an authorization.
       schema:
         type: array
         items:
@@ -25,7 +28,8 @@ get:
 post:
   tags:
     - Authorizations
-  summary: Create authorization request
+  summary: Create authorization request.
+  description: Note that for authorized_customer, only e-mail is supported at this moment.
   produces:
   - application/json
   parameters:

@@ -45,7 +45,16 @@ get:
   parameters:
     - name: status
       in: query
-      description: Only show orders with a status in the given, comma-separated list
+      description: |
+        Only show orders with a status in the given, comma-separated list.
+
+        There is one special case, the "wildcard" `not_final_or_with_mnp`
+        which will return all orders that could need attention.
+        In that case all other statuses in list will be ignored. As extra all orders with MNP will also be added.
+      type: string
+    - name: type
+      in: query
+      description: Only show orders with an order type in the given, comma-separated list
       type: string
     - name: subscription_id
       in: query

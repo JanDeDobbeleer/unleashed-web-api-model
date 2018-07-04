@@ -9,13 +9,16 @@ required:
 properties:
   id:
     type: string
+  account_id:
+    type: string
+    description: the account reference number for the subscription
   valid_from:
     type: string
-    format: date
+    format: date-time
     description: the datetime when this subscription was activated
   valid_until:
     type: string
-    format: date
+    format: date-time
     description: the datetime till when this subscription is active
   type:
     type: string
@@ -39,3 +42,22 @@ properties:
     description:  |
       Is this subscription owned by the customer who requested it?
       So this can only be false when this is an authorized subscription.
+  pending_product:
+    type: object
+    description: |
+      In case of price-plan migration that is not immediately active,
+      the new product is show here with the date from when it will be valid
+    required:
+     - valid_from
+     - product
+     - subscription_id
+    properties:
+      valid_from:
+         type: string
+         format: date
+         description: the datetime when the new product will be activated
+      product:
+        $ref: '#/definitions/Product'
+      subscription_id:
+        type: string
+        description: subscription id belonging to pending product (e.g subscription that needs topup)

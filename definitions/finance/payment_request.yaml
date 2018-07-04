@@ -13,4 +13,4 @@ properties:
     type: string
     description: ID of the order to pay.  Pass either this or invoice_id.
   payment_method:
-    $ref: '#/definitions/PaymentMethod'
+    $ref: '#/definitions/PaymentMethodAllowed'

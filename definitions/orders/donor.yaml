@@ -1,0 +1,26 @@
+type: object
+title: Info about MNP when applicable
+required:
+  - operator
+  - iccid
+  - request_type
+properties:
+  operator:
+    type: string
+    description: name of donor operator
+  msisdn:
+    type: string
+    format: msisdn
+    description: Number of the subscription if applicable
+  iccid:
+    type: string
+    description: Iccid of current SIM card, this
+  account_number:
+    type: string
+    description: current account number with other provider
+  request_type:
+    type: string
+    enum:
+      - prepaid
+      - private_postpaid
+      - business_postpaid

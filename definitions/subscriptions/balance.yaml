@@ -33,16 +33,22 @@ properties:
       type: object
       required:
         - descriptions
+        - category
         - valid_from
         - valid_until
         - total
         - remaining
         - used
         - type
-        - rates
       properties:
         descriptions:
           $ref: '#/definitions/Descriptions'
+        category:
+          type: string
+          enum:
+            - default
+            - super_on_net
+            - unknown
         valid_from:
           description: >
             Either the purchase date or the date the bundle is activated.
@@ -71,8 +77,6 @@ properties:
           type: string
           enum:
             - sms
-            - sms_super_on_net
             - data
             - voice
-            - voice_super_on_net
             - value
