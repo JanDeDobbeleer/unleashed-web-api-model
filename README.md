@@ -48,10 +48,15 @@ Functionality that is not yet available needs to be marked as `NOT YET IMPLEMENT
 We've got a wishlist of items we'd like to have, but therefore they are not necessarily going to be available.
 We're working on resolving these asap.
 
+## Deployment pipeline
+
+The code is built using [Travis CI][build-status] and then deployed to [Heroku][heroku] when master is green.
+Because we can't use Docker on Heroku (at least not at the time of doing this), we upload the folder's content so that Heroku can start Dapperdox once ready.
+
 [build-status-badge]: https://travis-ci.org/vikingco/unleashed-web-api-model.svg?branch=master
 [build-status]: https://travis-ci.org/vikingco/unleashed-web-api-model
 [uwa]: https://api.unleashed.be
 [docker]: https://www.docker.com/
 [compose]: https://docs.docker.com/compose/install/
 [node]: https://nodejs.org/en/
-
+[heroku]: https://heroku.com
